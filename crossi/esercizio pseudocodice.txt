@@ -1,0 +1,10 @@
+Esercizio:
+Scrivere l'algoritmo in pseudocodice che calcola il fattoriale di un numero
+
+-Prendere in input un numero n
+-Verificare se è maggiore di 0
+  - Se non è maggiore di 0 restitiusco un errore
+  - Se è maggiore di 0, imposto il risultato al valore di n
+    - Per n-1 volte 
+      - Moltiplico il risultato per il suo precedente (n-1)
+      - Aggiorno il valore di n al suo precedente
