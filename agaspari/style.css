@@ -20,3 +20,14 @@ a.testo-rosso{
 a.testo-rosso.testo-marrone {
     color: darkred;
 }
+
+/* Tutti gli elementi di tipo a racchiusi all'interno di un elemento
+   con classe testo-principale */
+.testo-principale a{
+    color: yellow;
+}
+
+/* Tutti gli elementi figli di un paragrafo */
+p > * {
+    color: green;
+}

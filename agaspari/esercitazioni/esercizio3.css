@@ -1,0 +1,66 @@
+/* Colora di rosso tutti gli elementi di tipo span */
+
+span {
+    color: red;
+}
+
+
+/* Colora di blu tutti gli span all'interno di un paragrafo */
+
+p > span {
+    color: blue;
+}
+
+
+/* Colora di verde uno span */
+
+div#sezione-1 > p.classe-1 span.classe-1 {
+    color: green;
+}
+
+
+/* Prendi l'ultimo paragrafo e dagli colore viola */
+
+.sezione-2 .classe-1 {
+    color: purple;
+}
+
+
+/* Colora di giallo al passaggio del mouse */
+
+a:hover {
+    color: yellow;
+}
+
+
+/* Colora di rosa al passaggio del mouse il primo paragrafo di classe 2*/
+
+p.classe-2:hover {
+    color: pink;
+}
+
+
+/* Selezione in negativo: colora di arancione il primo paragrafo di sezione-2 */
+
+.sezione-2 > p:not(.classe-1) {  /* Si cerca di usarlo il meno possibile, in quanto pesante da elaborare */
+    color: orange;
+}
+.sezione-2 > p:first-child {  /* Stesso risultato, in questo caso è da prediligere perché è più rapido */
+    color: orange;          /* Esiste anche last-child che prende l'ultimo figlio. Entrambi prendono il primo figlio indipendentemente dal tipo */
+}
+.sezione-2 > :nth-child(1) {  /* n-esimo figlio specificato tra parentesi */
+    color: orange;          /* Tra parentesi posso specificare espressioni: 2n oppure :even per tutti i pari, 2n+1 oppure :odd per i dispari */   
+}
+
+
+/* Colora gli elementi della lista con i rispettivi colori */
+
+ul.classe-2 > :nth-child(even) {
+    color: green;
+}
+ul.classe-2 > :nth-child(odd) {
+    color: red;
+}
+ul.classe-2 > :first-child {
+    color: yellow;
+}
