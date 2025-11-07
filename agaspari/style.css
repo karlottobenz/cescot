@@ -1,0 +1,22 @@
+/*Tutti i paragrafi colorati di blu*/
+p {
+    color: blue;
+}
+
+/*Tutti gli elementi con classe testo-rosso*/
+.testo-rosso{
+    color: red;
+}
+
+#sezione-2 {
+    color: purple;
+}
+
+/* Tutti gli elementi di tipo a con classe testo-rosso*/
+a.testo-rosso{
+    color: brown;
+}
+
+a.testo-rosso.testo-marrone {
+    color: darkred;
+}
