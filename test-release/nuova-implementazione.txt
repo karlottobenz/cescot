@@ -1,0 +1,9 @@
+Esercizio:
+- Creare il branch "nuova implementazione"
+- Nel branch "nuova implementazione" aggiungere la cartella "test-release"
+- Nella cartella "test-release" creare il file "nuova-implementazione"
+- Nel file "nuova-implementazione" scrivere:
+  Questa è la nuova implementazione
+  Questo file e questa cartella non sono presenti negli altri branch
+
+- Fare committ e push del branch nuova-implementazione
