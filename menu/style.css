@@ -6,6 +6,10 @@ p {
     color: black;
 }
 
-link {
+a {
     color: green;
+}
+
+span {
+    color: yellow;
 }
