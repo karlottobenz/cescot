@@ -1,0 +1,23 @@
+h1 {
+    color: red;
+}
+
+h1:hover {
+    color: white;
+    background-color: red;
+}
+
+
+div {
+    color: red;
+    background-color: yellow;
+}
+
+div:nth-child(even):hover {
+    color: yellow;
+    background-color: red;
+}
+div:nth-child(odd):hover {
+    color: yellow;
+    background-color: blue;
+}
