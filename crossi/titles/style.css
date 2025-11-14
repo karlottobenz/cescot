@@ -1,0 +1,15 @@
+h1 {
+    color: red;
+}
+
+body > :nth-child(2){
+    color: blue;
+}
+
+body > :nth-child(5){
+    color: green;
+}
+
+h3 {
+    color: yellow;
+}
