@@ -3,9 +3,18 @@ p {
     color: blue;
 }
 
+body {
+    font-size: 16px;
+    background-color: #666666;
+}
+
 /*Tutti gli elementi con classe testo-rosso*/
 .testo-rosso{
     color: red;
+    font-family: monospace, Times, serif;
+    text-decoration: underline;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 #sezione-2 {
@@ -30,4 +39,11 @@ a.testo-rosso.testo-marrone {
 /* Tutti gli elementi figli di un paragrafo */
 p > * {
     color: green;
+}
+
+div#spazi {
+    background-color: aqua;
+    margin: 50px 30px;
+    padding: 50px 30px;
+    border: 10px tomato solid;
 }

@@ -1,0 +1,51 @@
+div > :nth-child(1){background-color: orange;}
+div > :nth-child(2){background-color: rgb(255, 145, 0);}
+div > :nth-child(3){background-color: red}
+div > :nth-child(4){background-color: brown}
+
+div.inline > * {
+    display: inline;
+}
+
+div.inline > * {
+    display: block;
+}
+
+div.inline-block > * {
+    display: inline-block;
+    width: 100px;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.opacity-0{
+    opacity: 0.5;
+}
+
+.flex {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.flex-center {
+    justify-content: end;
+}
+
+.direction-reverse {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.grow-1 {
+    flex-grow: 3;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
