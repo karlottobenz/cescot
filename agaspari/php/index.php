@@ -96,4 +96,42 @@
     if(array_key_exists("telefono", $persona_2) && $persona_2["telefono"] != ""):
         echo "Tel: " . $persona_2["telefono"];
     endif;
+
+    // Array di voti
+    $voti = [6, 7, 7.5, 4, 9, 8];
+
+    $somma = 0;
+    $num_voti = 0;
+
+    // Ciclo per fare la media dei voti
+
+    for($i = 0; $i < count($voti); $i++){
+        if($voti[$i] > 0 || $voti[$i] <= 10){
+            $somma = $somma + $voti[$i];
+            $num_voti++;
+        }
+    }
+    echo "\n";
+    echo "La somma dei voti è: " . $somma; echo "\n";
+    echo "Il numero di voti è: " . $num_voti; echo "\n";
+    $media = $somma / $num_voti;
+    echo "La media dei voti è: " . $media; echo "\n";
+
+
+    $numero = 45;
+    $valori = [1, 3, 6, 87, 23, 5, 45, 17, 89, 12, 34];
+
+    $trovato = false;
+    while(!$trovato){
+        if ($valori[$i] == $numero){
+            $trovato = true;
+        }
+        $i++;
+    }
+
+    if($trovato){
+        echo $numero . " è presente nell'array (" . $i . " iterazioni)";
+    } else {
+        echo $numero . " non è presente nell'array (" . $i . " iterazioni)";
+    }
 ?>
