@@ -11,7 +11,7 @@
     <h1>pagina di prova</h1>
     <?php
     for ($i = 1; $i <= 15; $i++){
-        printDiv("<div>Questo è il div numero $i</div>") "numbered";
+        echo("<div>Questo è il div numero $i</div>") "numbered";
     }
     ?>
     <div class="closing">questa è la fine della pagina</div>
