@@ -6,16 +6,16 @@
         <?php
         $random = RAND(1, 3);
         if($random == 1){
-            <link href="style_1.css" rel="stylesheet">
+            echo '<link href="style_1.css" rel="stylesheet">';
         } elseif($random == 2){
-            <link href="style_2.css" rel="stylesheet">
+            echo '<link href="style_2.css" rel="stylesheet">';
         } elseif($random == 3){
-            <link href="style_3.css" rel="stylesheet">
+            echo '<link href="style_3.css" rel="stylesheet">';
         }
         ?>
     </head>
         <body>
-            <h1>CSS casuali</h>
+            <h1>CSS casuali</h1>
             <?php
                 for ($i = 1; $i <= 10; $i++){
                     echo "<div>Questo è un div pari</div>";
