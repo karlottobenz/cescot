@@ -10,10 +10,25 @@
 <body>
     <h1>pagina di prova</h1>
     <?php
-    for ($i = 1; $i <= 10; $i++){
-        echo "<p>Questo è il paragrafo numero $i</p>";
+    for ($i = 1; $i <= 15; $i++){
+        printDiv("<div>Questo è il div numero $i</div>") "numbered";
     }
     ?>
+    <div class="closing">questa è la fine della pagina</div>
     
 </body>
 </html>
+
+<?php
+/**
+ * receives a strins and prints a div containing the string
+ * @param string $text
+ *  @param string $class
+ * @return void
+ */
+function printDiv(string $text, $class) {
+    echo "<div class='$class'>$text</div>";
+    echo ""
+    }
+
+?>

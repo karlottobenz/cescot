@@ -1,15 +1,16 @@
+
 h1 {
     background-color: red;
     color: white;
     
 }
 
-.div-num {
+.div-numbered {
     background-color: blue;
     color: white;
 }
 
-.div-foot {
+.div.closing {
     background-color: black;
     color: white;
 
