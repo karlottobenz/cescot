@@ -28,10 +28,10 @@
         "eta"     => 21
     );
 
-    echo "<br>";
+    /*echo "<br>";
     print_r($array_3);
     echo "<br>";
-    var_dump($array_3);
+    var_dump($array_3); */
 
     // Verifichiamo se Mario Rossi è maggiorenne
     echo "<br>";
@@ -111,11 +111,11 @@
             $num_voti++;
         }
     }
-    echo "\n";
-    echo "La somma dei voti è: " . $somma; echo "\n";
-    echo "Il numero di voti è: " . $num_voti; echo "\n";
+    echo "<br>"; echo "<br>";
+    echo "La somma dei voti è: " . $somma; echo "<br>";
+    echo "Il numero di voti è: " . $num_voti; echo "<br>";
     $media = $somma / $num_voti;
-    echo "La media dei voti è: " . $media; echo "\n";
+    echo "La media dei voti è: " . $media; echo "<br>";
 
 
     $numero = 45;
@@ -134,4 +134,14 @@
     } else {
         echo $numero . " non è presente nell'array (" . $i . " iterazioni)";
     }
+
+    /**
+     * Operatori di incremento e decremento
+     */
+    $i = 1;
+    echo $i++;  // Stampa e poi incrementa, i == 2
+    echo ++$i;  // Incrementa e poi stampa, i == 3
+    echo $i--;  // Stampa e poi decrementa, i == 2
+    echo --$i;  // Decrementa e poi stampa, i == 1
+
 ?>
