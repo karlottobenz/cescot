@@ -8,7 +8,7 @@
         <?php
             $n = RAND(5, 30);
             for($i = 1; $i <= $n; $i++){
-                $n2 = RAND(1, 3);
+                $n2 = RAND(1, 4);
                 echo "<div class='casuale$n2'>div casuale</div>";
 
             }
