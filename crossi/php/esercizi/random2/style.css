@@ -14,7 +14,7 @@ h1 {
     color: white;
 }
 
-.div.closing {
+body:last-child {
     background-color: red;
     color: white;
 
