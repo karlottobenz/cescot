@@ -14,7 +14,7 @@ h1 {
     color: white;
 }
 
-body:last-child {
+body > :last-child {
     background-color: red;
     color: white;
 
