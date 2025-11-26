@@ -5,18 +5,13 @@ h1 {
     
 }
 
-.dispari {
-    background-color: gray;
-    color: white;
-}
-
-.pari{
-    background-color: black;
+.div-numbered {
+    background-color: blue;
     color: white;
 }
 
 .div.closing {
-    background-color: red;
+    background-color: black;
     color: white;
 
 }

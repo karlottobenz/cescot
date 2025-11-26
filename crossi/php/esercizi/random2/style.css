@@ -1,12 +1,21 @@
 h1 {
-    color: red;
-
-}
-.div-numbered {
-    color:white;
-    background-color: black;
-}
-.div-foot {
-    color: white;
     background-color: red;
+    color: white;
+    
+}
+
+.dispari {
+    background-color: gray;
+    color: white;
+}
+
+.pari{
+    background-color: black;
+    color: white;
+}
+
+.div.closing {
+    background-color: red;
+    color: white;
+
 }
