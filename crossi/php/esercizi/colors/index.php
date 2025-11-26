@@ -8,11 +8,8 @@
         <?php
             $n = RAND(5, 30);
             for($i = 1; $i <= $n; $i++){
-                if($i % 2 != 0) {
-                    echo "<div class='dispari'>io sono dispari</div>";
-                } else {
-                    echo "<div class='pari'>io sono pari</div>";
-                }
+                echo "<div>div casuale</div>";
+
             }
         ?>
         <div>fine pagina</div>
