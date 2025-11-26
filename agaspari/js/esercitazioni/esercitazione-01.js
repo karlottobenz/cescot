@@ -49,15 +49,16 @@ function esercizio02(){
     let giorno = window.prompt("Inserisci il giorno");
     let mese = window.prompt("Inserisci il mese");
     let anno = window.prompt("Inserisci l'anno");
+    document.getElementById('data-inserita2').innerText = giorno + "/" + mese + "/" + anno;
+
     let data = new Date (giorno + "/" + mese + "/" + anno);
-    document.getElementById('data-inserita').innerText = giorno + "/" + mese + "/" + anno;
     // Giorno della settimana da 0 a 6
-    data.getDay();
 
     // Stampare Mercoledì 26 Novembre 2025
     let risultato;
+    let giornoSettimana = data.getDay();
 
-    switch(data.getDay()){
+    switch(giornoSettimana){
         case 0:
             risultato = "Domenica";
         break;
@@ -84,45 +85,45 @@ function esercizio02(){
      risultato += " " + giorno + " ";
 
     switch (mese) {
-    case "1":
-       risultato += "Gennaio";
-    break;
-    case "2":
-        risultato += "Febbraio";
-    break;
-    case "3":
-        risultato += "Marzo";
-    break;
-    case "4":
-        risultato += "Aprile";
-    break;
-    case "5":
-        risultato += "Maggio";
-    break;
-    case "6":
-        risultato += "Giugno";
-    break;
-    case "7":
-        risultato += "Luglio";
-    break;
-    case "8":
-        risultato += "Agosto";
-    break;
-    case "9":
-        risultato += "Settembre";
-    break;
-    case "10":
-        risultato += "Ottobre";
-    break;
-    case "11":
-        risultato += "Novembre";
-    break;
-    case "12":
-        risultato += "Dicembre";
-    break;
+        case "1":
+        risultato += "Gennaio";
+        break;
+        case "2":
+            risultato += "Febbraio";
+        break;
+        case "3":
+            risultato += "Marzo";
+        break;
+        case "4":
+            risultato += "Aprile";
+        break;
+        case "5":
+            risultato += "Maggio";
+        break;
+        case "6":
+            risultato += "Giugno";
+        break;
+        case "7":
+            risultato += "Luglio";
+        break;
+        case "8":
+            risultato += "Agosto";
+        break;
+        case "9":
+            risultato += "Settembre";
+        break;
+        case "10":
+            risultato += "Ottobre";
+        break;
+        case "11":
+            risultato += "Novembre";
+        break;
+        case "12":
+            risultato += "Dicembre";
+        break;
     }
 
-    document.getElementById("es2-risultato").innerText = risultato;
+    document.getElementById("risultato-es2").innerText = risultato;
 }
 
 esercizio02();
