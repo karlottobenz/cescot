@@ -4,12 +4,11 @@ h1 {
 
 .casuale {
     font-size: 50px;
-    background-color: red;
+    background-color: gray;
 }
 
 
 body > :last-child {
-    background-color: gray;
-    
-
+    background-color: red;
+    color: white;
 }
