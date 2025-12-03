@@ -1,5 +1,6 @@
 var bottonePremuto = document.getElementById("bottone");
+var div = document.getElementById("div");
 
 bottonePremuto.addEventListener("click", function(){
-    bottonePremuto.style.
+    div.style = background-color: red;
 })
