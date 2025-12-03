@@ -101,7 +101,7 @@ console.log(e == true);
 console.log(d == e); // vero
 console.log(d === e); // falso
 
-
+/*
 var numero = window.prompt("Inserisci un numero");
 
 if(numero %2 == 0){
@@ -109,7 +109,7 @@ if(numero %2 == 0){
 }else {
     window.alert("Numero dispari");
 }
-/*
+
 var mese = window.prompt("Inserisci il numero del mese");
 
 switch (mese) {
@@ -165,7 +165,7 @@ console.log(lista.getElementsByClassName('figlio'));
 lista.innerText = "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName('figlio'));
 
-*/
+
 
 var voti = [4, 6, 7, 8, 6, 8];
 
@@ -192,7 +192,7 @@ if(trovato){
 } else {
     console.log("Non trovato");
 }
-
+ */
 var array = [1, 2, 3, 4, 5];
 var oggetto = {
     nome: "Luca",
@@ -208,3 +208,29 @@ for(valore of array){
 for(chiave in oggetto){
     console.log(oggetto[chiave]);
 }
+
+var clickMeButton = document.getElementById("click-me-button");
+
+clickMeButton.addEventListener("mouseenter", function(){
+    clickMeButton.style.top = Math.random() * 100 + "%";
+    clickMeButton.style.left = Math.random() * 100 + "%";
+})
+
+/*
+<input id="password" type="password" placeholder="password"> 
+            <button id="show-password">
+                Mostra la password
+            </button><br> */
+
+var showPasswordBtn = document.getElementById("show-password");
+showPasswordBtn.addEventListener('click', function(){
+    let passwordInput = document.getElementById('password');
+
+    if(passwordInput.getAttribute('type') == 'password'){
+        passwordInput.setAttribute('type', 'text');
+        showPasswordBtn.innerText = "Nascondi la password";
+    } else {
+        passwordInput.setAttribute('type', 'password');
+        showPasswordBtn.innerText = "Mostra la password";
+    }
+})
