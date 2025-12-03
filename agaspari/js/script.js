@@ -101,14 +101,14 @@ console.log(e == true);
 console.log(d == e); // vero
 console.log(d === e); // falso
 
-/*
+
 var numero = window.prompt("Inserisci un numero");
 
 if(numero %2 == 0){
     window.alert("Numero pari");
 }else {
     window.alert("Numero dispari");
-} */
+}
 /*
 var mese = window.prompt("Inserisci il numero del mese");
 
@@ -149,7 +149,7 @@ switch (mese) {
     case "12":
         window.alert("Dicembre");
     break;
-}  */
+}  
 
 
 console.log(document.getElementById("elemento-1"));
@@ -164,3 +164,47 @@ console.log(lista.getElementsByClassName('figlio'));
 
 lista.innerText = "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName('figlio'));
+
+*/
+
+var voti = [4, 6, 7, 8, 6, 8];
+
+for(let i = 0; i < voti.length; i++){
+    somma += voti[i];
+}
+console.log("Media = " + (somma / voti.length));
+
+var numero = window.prompt("Inserisci un numero");
+
+var elementi = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let i = 0;
+let trovato = false;
+while (!trovato && i < elementi.length){
+    if(elementi[i] == numero){
+        trovato = true;
+    }
+    i++;
+}
+
+if(trovato){
+    console.log("Elemento trovato");
+} else {
+    console.log("Non trovato");
+}
+
+var array = [1, 2, 3, 4, 5];
+var oggetto = {
+    nome: "Luca",
+    cognome: "Rossi"
+};
+
+//ciclo for of
+for(valore of array){
+    console.log(valore);
+}
+
+//Ciclo for in
+for(chiave in oggetto){
+    console.log(oggetto[chiave]);
+}
