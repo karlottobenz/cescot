@@ -39,7 +39,7 @@ bottoneAlterna.addEventListener('click', function(){ // son 😭😭😭😭😭
     }
 
     let j = 0;
-    while(j <= 19){
+    while(j <= 18){
         div[j].classList.add("rosso");
         j++;
         div[j].classList.add("giallo");
