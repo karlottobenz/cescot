@@ -28,7 +28,7 @@ bottoneBlu.addEventListener('click', function(){
     }
 })
 
-bottoneAlterna.addEventListener('click', function(){
+bottoneAlterna.addEventListener('click', function(){ // son 😭😭😭😭😭😭 im crine 😭😭😭😭😭😭
     
     let i = 0;
     while(i <= 19){
