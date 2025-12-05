@@ -1,13 +1,21 @@
 h1 {
     color:red
 }
-.div {
-    background-color: yellow;
+div {
     width: 100px;
     height: 100px;
 
 }
 
-.red {
+.giallo {
+    background-color: yellow;
+}
+
+.rosso {
     background-color: red;
 }
+
+.blu {
+    background-color: blue;
+}
+
