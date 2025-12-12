@@ -1,6 +1,7 @@
 var bottoneRosso = document.getElementById('bottonerosso');
 var bottoneGiallo = document.getElementById('bottonegiallo');
 var bottoneBlu = document.getElementById('bottoneblu');
+var bottoneAlterna = document.getElementById('bottonealterna');
 var div = document.getElementsByClassName("div");
 
 bottoneRosso.addEventListener('click', function(){
@@ -24,5 +25,26 @@ bottoneBlu.addEventListener('click', function(){
         div[i].classList.remove("rosso");
         div[i].classList.remove("giallo");
         div[i].classList.add("blu");
+    }
+})
+
+bottoneAlterna.addEventListener('click', function(){ // son 😭😭😭😭😭😭 im crine 😭😭😭😭😭😭
+    
+    let i = 0;
+    while(i <= 19){
+        div[i].classList.remove("rosso");
+        div[i].classList.remove("giallo");
+        div[i].classList.remove("blu");
+        i++;
+    }
+
+    let j = 0;
+    while(j <= 18){
+        div[j].classList.add("rosso");
+        j++;
+        div[j].classList.add("giallo");
+        j++;
+        div[j].classList.add("blu");
+        j++;
     }
 })
