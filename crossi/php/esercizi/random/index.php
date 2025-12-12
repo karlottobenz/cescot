@@ -4,10 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Esercizio</title>
         <?php
-        $random = RAND(1, 3);
-        if($random == 1){
+        if(RAND(1, 3) == 1){
             echo '<link href="style_1.css" rel="stylesheet">';
-        } elseif($random == 2){
+        } elseif(RAND(1, 3) == 2){
             echo '<link href="style_2.css" rel="stylesheet">';
         } else {
             echo '<link href="style_3.css" rel="stylesheet">';
