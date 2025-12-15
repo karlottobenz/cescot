@@ -1,22 +1,35 @@
-var bottoneRosso = document.getElementById('Primorosso');
-var bottoneprimo_gruppo = document.getElementById('Secondorosso');
-var bottonesecondo_gruppo = document.getElementById('Tuttirosso');
-var bottoneblu = document.getElementById('Primoblu');
-var bottoneprimo_gruppo = document.getElementById('Secondoblu');
-var bottonesecondo_gruppo = document.getElementById('Tuttiblu');
+var bottonePrimoRosso = document.getElementById('primorosso');
+var bottoneSecondoRosso = document.getElementById('secondorosso');
+var bottoneTuttiRosso = document.getElementById('tuttirosso');
+var bottonePrimoBlu = document.getElementById('primoblu');
+var bottoneSecondoBlu = document.getElementById('secondoblu');
+var bottoneTuttiBlu = document.getElementById('tuttiblu');
 
-PrimoRosso.addEventListener('click', function(){
-    for(let i = 0; rand; i++){
-        div[i].classList.add("rosso");
-        div[i].classList.add("primo_gruppo");
-        div[i].classList.remove("blu");
+var PrimoGruppo = document.getElementsByClassName('primo_gruppo');
+var SecondoGruppo = document.getElementsByClassName('secondo_gruppo');
+
+bottonePrimoRosso.addEventListener('click', function(){
+    for(let i = 0; i <= PrimoGruppo.length; i++){
+        PrimoGruppo[i].classList.add("rosso");
+        PrimoGruppo[i].classList.remove("blu");
     }
 })
 
-SecondoRosso.addEventListener('click', function(){
-    for(let i = 0; i <= 19; i++){
-        div[i].classList.remove("primo_gruppo");
-        div[i].classList.remove("secondo_gruppo");
-        div[i].classList.remove("blu");
+bottoneSecondoRosso.addEventListener('click', function(){
+    for(let i = 0; i <= SecondoGruppo.length; i++){
+        SecondoGruppo[i].classList.remove("blu");
+        SecondoGruppo[i].classList.add("rosso");
+    }
+})
+
+bottoneTuttiRosso.addEventListener('click', function(){
+    for(let i = 0; i <= PrimoGruppo.length; i++){
+        PrimoGruppo[i].classList.add("rosso");
+        PrimoGruppo[i].classList.remove("blu");
+    }
+
+    for(let j = 0; j <= SecondoGruppo.length; j++){
+        SecondoGruppo[j].classList.add("rosso");
+        SecondoGruppo[j].classList.remove("blu");
     }
 })

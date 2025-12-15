@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
     include('../../php/esercizi/lib/libreria.php')
 ?>
