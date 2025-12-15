@@ -28,6 +28,7 @@
      <?php
         rand_div_secondo();
     ?>
+    <script src ="script.js"></script>
     
 </body>
 </html>
