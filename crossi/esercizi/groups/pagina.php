@@ -13,12 +13,18 @@
     <div>
         <button id="primorosso">Primo rosso</button>
         <button id="secondorosso">Secondo rosso</button>
+        <button id="terzorosso">Terzo rosso</button>
         <button id="tuttirosso">Tutti rosso</button>
         <br>
         <button id="primoblu">Primo blu</button>
         <button id="secondoblu">Secondo blu</button>
+        <button id="terzoblu">Terzo blu</button>
         <button id="tuttiblu">Tutti blu</button>
         <br>
+        <button id="primogiallo">Primo giallo</button>
+        <button id="secondogiallo">Secondo giallo</button>
+        <button id="terzogiallo">Terzo giallo</button>
+        <button id="tuttigiallo">Tutti giallo</button>
     </div>
     <h2>Primo Gruppo</h2>
      <?php
@@ -32,7 +38,7 @@
     
     <h2>Terzo Gruppo</h2>
      <?php
-        rand_div_terzo(5,20);
+        rand_div_terzo();
     ?>
     <script src ="script.js"></script>
     
