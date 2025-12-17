@@ -29,6 +29,11 @@
      <?php
         rand_div_secondo();
     ?>
+    
+    <h2>Terzo Gruppo</h2>
+     <?php
+        rand_div_terzo(5,20);
+    ?>
     <script src ="script.js"></script>
     
 </body>
