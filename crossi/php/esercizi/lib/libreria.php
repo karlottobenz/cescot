@@ -29,6 +29,10 @@ function rand_div_secondo(){
     }
 }
 
+
+/**
+ * Stampa un numero casuale (fra 5 e 20) di div
+ */
 function rand_div_terzo(){
     for ($i = 1; $i <= RAND(5,20); $i++){
         echo "<div class='terzo_gruppo'>Div $i</div>";
