@@ -16,7 +16,7 @@ var bottoneSecondoGiallo = document.getElementById('secondogiallo');
 var bottoneTerzoGiallo = document.getElementById('terzogiallo');
 var bottoneTuttiGiallo = document.getElementById('tuttigiallo');
 
-/*====================== ROSSO ======================*/
+/*===================== ROSSO =====================*/
 bottonePrimoRosso.addEventListener('click', function(){
     change_divs_color("primo_gruppo", "red");
 })
@@ -38,7 +38,7 @@ bottoneTuttiRosso.addEventListener('click', function(){
 })
 
 
-/*====================== BLU ======================*/
+/*===================== BLU =====================*/
 bottonePrimoBlu.addEventListener('click', function(){
     change_divs_color("primo_gruppo", "blue");
 })
@@ -60,7 +60,7 @@ bottoneTuttiBlu.addEventListener('click', function(){
 })
 
 
-/*===================== GIALLO =====================*/
+/*==================== GIALLO ====================*/
 bottonePrimoGiallo.addEventListener('click', function(){
     change_divs_color("primo_gruppo", "yellow");
 })
