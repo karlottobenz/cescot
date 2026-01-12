@@ -1,10 +1,3 @@
-<?php
-    //inizializza la connessione al database
-    $databaseHost = '127.0.0.1';
-    $databaseName = 'cescot';
-    $databaseUsername = 'root';
-    $databasePassword = '';
-?>  
 <html>
     <head>
         <title>Esercizio</title>
@@ -12,6 +5,11 @@
     </head>
     <h1>Clienti</h1>
         <?php
+            //inizializza la connessione al database
+            $databaseHost = '127.0.0.1';
+            $databaseName = 'cescot';
+            $databaseUsername = 'root';
+            $databasePassword = '';
             $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
             //verifica la connessione
