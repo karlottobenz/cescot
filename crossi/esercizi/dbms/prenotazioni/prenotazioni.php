@@ -7,12 +7,19 @@
         <h1>Prenotazioni</h1>
         <?php
             require_once("../../../php/esercizi/lib/libreria.php");
-            //inizializza la connessione al database
+            /*inizializza la connessione al database
             $databaseHost = '127.0.0.1';
             $databaseName = 'prenotazioni';
             $databaseUsername = 'root';
             $databasePassword = '';
-            $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+            $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); */
+
+            $mysqli = new mysqli(
+                getenv("DB_HOST"),
+                getenv("DB_USER"),
+                getenv("DB_PASS"),
+                getenv("DB_NAME")
+            );
 
             //verifica la connessione
             if (!$mysqli) {
