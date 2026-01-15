@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link ref="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Clienti</h1>
@@ -26,10 +26,10 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            $query = 'SELECT citta.citta, clienti.nome, clienti.cognome, prenotazioni.arrivo, prenotazioni.importo, prenotazioni.caparra,  ROUND(prenotazioni.importo - prenotazioni.caparra, 2) AS saldo
-                      FROM citta
-                      INNER JOIN clienti ON citta.id_citta = clienti.citta
-                      INNER JOIN prenotazioni ON clienti.id_cliente = prenotazioni.cliente';
+            $query = 'SELECT clienti.nome, clienti.cognome, regioni.regione, regioni.area_geografica, citta.citta
+                      FROM clienti
+                      INNER JOIN citta ON clienti.citta = citta.id_citta
+                      INNER JOIN regioni ON citta.regione = regioni.id_regione';
 
             $result = mysqli_query($mysqli, $query);
 
