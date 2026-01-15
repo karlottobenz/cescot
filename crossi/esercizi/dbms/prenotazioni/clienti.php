@@ -4,7 +4,7 @@
         <link ref="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>clienti</h1>
+        <h1>Clienti</h1>
         <?php
             require_once("../../../php/esercizi/lib/libreria.php");
             /*inizializza la connessione al database
@@ -37,8 +37,8 @@
                 $clienteDivContent = 
                         "<h2>Nome: $row[nome] Cognome: $row[cognome]</h2>
                         <p>Regione di residenza: $row[regione]</p>
-                        <p>Area geografica di residenza: $row[Area geografica]</p>
-                        <p>Città di residenza: $row[città]</p>";
+                        <p>Area geografica di residenza: $row[area_geografica]</p>
+                        <p>Città di residenza: $row[citta]</p>";
                         printDiv($clienteDivContent, 'cliente');
             }
             ?>
