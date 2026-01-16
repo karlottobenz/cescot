@@ -2,6 +2,22 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <form action="/processa_dati" method="POST">
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome"><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="tua@email.com"><br><br>
+
+  <label for="messaggio">Messaggio:</label><br>
+  <textarea id="messaggio" name="messaggio" rows="4" cols="50" placeholder="Scrivi qui il tuo messaggio..."></textarea><br><br>
+
+  <input type="checkbox" id="newsletter" name="newsletter" value="sì">
+  <label for="newsletter">Iscriviti alla newsletter</label><br><br>
+
+  <input type="submit" value="Invia">
+  <input type="reset" value="Annulla">
+</form>
     </head>
     <body>
         <h1>Regioni</h1>
