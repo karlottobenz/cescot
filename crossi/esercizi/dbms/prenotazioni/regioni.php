@@ -2,29 +2,19 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <form action="/processa_dati" method="POST">
-  <label for="nome">Nome:</label><br>
-  <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome"><br><br>
-
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" placeholder="tua@email.com"><br><br>
-
-  <label for="messaggio">Messaggio:</label><br>
-  <textarea id="messaggio" name="messaggio" rows="4" cols="50" placeholder="Scrivi qui il tuo messaggio..."></textarea><br><br>
-
-  <input type="checkbox" id="newsletter" name="newsletter" value="sì">
-  <label for="newsletter">Iscriviti alla newsletter</label><br><br>
-
-  <input type="submit" value="Invia">
-  <input type="reset" value="Annulla">
-</form>
     </head>
     <body>
         <h1>Regioni</h1>
-        <form
+        <form method="GET">
+            <label for="nomereg">Cerca regione:</label><br>
+            <input type="text" id="regione" name="regione" placeholder="Inserisci regione"><br>
+            <input type="submit" value="Cerca">
+            <input type="reset" value="Annulla">
+        </form>
         <?php
             require_once("../../../php/esercizi/lib/libreria.php");
 
+            $regione_da_cercare = isset($_GET['regione']) ? $_GET['regione'];
             $mysqli = new mysqli(
                 getenv("DB_HOST"),
                 getenv("DB_USER"),
@@ -45,15 +35,28 @@
                       GROUP BY regioni.regione';
 
             $result = mysqli_query($mysqli, $query);
-
-            while ($row = mysqli_fetch_assoc($result)) {
-                $regioneDivContent = 
+            
+            if ($_SERVER['REQUESTED_METHOD'] !== 'GET'){
+                $nomereg = $_GET['nomereg'];
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $regioneDivContent = 
                         "<h2>" . $row['regione'] . "</h2>
-				        <p>Numero di prenotazioni: " . $row['numero_prenotazioni'] . "</p>
-				        <p>Importo totale: " . $row['totale_importo'] . "€</p>
-				        <p class='saldo'>Saldo totale: " . $row['totale_saldo'] . "€</p>";
+                        <p>Numero di prenotazioni: " . $row['numero_prenotazioni'] . "</p>
+                        <p>Importo totale: " . $row['totale_importo'] . "€</p>
+                        <p class='saldo'>Saldo totale: " . $row['totale_saldo'] . "€</p>";
                         printDiv($regioneDivContent, 'regione');
+                }
             }
-            ?>
+            elseif ($nomereg == $row['regione']) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $regioneDivContent = 
+                        "<h2>" . $row['regione'] . "</h2>
+                        <p>Numero di prenotazioni: " . $row['numero_prenotazioni'] . "</p>
+                        <p>Importo totale: " . $row['totale_importo'] . "€</p>
+                        <p class='saldo'>Saldo totale: " . $row['totale_saldo'] . "€</p>";
+                        printDiv($regioneDivContent, 'regione');
+                }
+            }
+        ?>
     </body>
 </html>
