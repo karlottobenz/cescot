@@ -5,6 +5,7 @@
     </head>
     <body>
         <h1>Regioni</h1>
+        <form
         <?php
             require_once("../../../php/esercizi/lib/libreria.php");
 
@@ -30,12 +31,12 @@
             $result = mysqli_query($mysqli, $query);
 
             while ($row = mysqli_fetch_assoc($result)) {
-                $clienteDivContent = 
-                        "<h2>Nome regione: $row[regione]</h2>
-                        <p>Regione di residenza: $row[regione]</p>
-                        <p>Area geografica di residenza: $row[area_geografica]</p>
-                        <p>Città di residenza: $row[citta]</p>";
-                        printDiv($clienteDivContent, 'cliente');
+                $regioneDivContent = 
+                        "<h2>" . $row['regione'] . "</h2>
+				        <p>Numero di prenotazioni: " . $row['numero_prenotazioni'] . "</p>
+				        <p>Importo totale: " . $row['totale_importo'] . "€</p>
+				        <p class='saldo'>Saldo totale: " . $row['totale_saldo'] . "€</p>";
+                        printDiv($regioneDivContent, 'regione');
             }
             ?>
     </body>
