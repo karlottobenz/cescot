@@ -26,6 +26,10 @@
 
         // Regione selezionata dall’utente
         $regioneSelezionata = isset($_GET['regione']) ? $_GET['regione'] : "";
+
+        // Parametri paginazione
+        $limit = 50;
+        $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
         ?>
 
         <!-- FORM DI SELEZIONE REGIONE -->
@@ -60,11 +64,13 @@
         // Se l’utente ha selezionato una regione, aggiungo il filtro
         if ($regioneSelezionata !== "") {
             $query .= " WHERE regioni.id_regione = ?";
+            $query .= " LIMIT ? OFFSET ?";
             $stmt = $mysqli->prepare($query);
-            $stmt->bind_param("i", $regioneSelezionata);
+            $stmt->bind_param("iii", $regioneSelezionata, $limit, $offset);
             $stmt->execute();
             $result = $stmt->get_result();
         } else {
+            $query .= " LIMIT $limit OFFSET $offset";
             $result = $mysqli->query($query);
         }
 
@@ -80,8 +86,19 @@
                 printDiv($clienteDivContent, 'cliente');
             }
         } else {
-            echo "<p>Nessun cliente trovato per la regione selezionata.</p>";
+            echo "<p>Nessun cliente trovato.</p>";
         }
+
+        // Link paginazione
+        echo "<hr>";
+
+        $prevOffset = max(0, $offset - $limit);
+        $nextOffset = $offset + $limit;
+
+        $baseUrl = "?regione=$regioneSelezionata";
+
+        echo "<a href='$baseUrl&offset=$prevOffset'>Prima</a> | ";
+        echo "<a href='$baseUrl&offset=$nextOffset'>Dopo</a>";
         ?>
 
     </body>
