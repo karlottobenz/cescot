@@ -1,5 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
-import {InnerBlocks, InspectorControls, useBlocksProps} from '@wordpress/block-editor';
+import {InnerBlocks, InspectorControls, useBlockProps} from '@wordpress/block-editor';
+import {PanelBody, RangeControl} from '@wordpress/components';
 import blockMeta from '../block.json';
 
 registerBlockType (blockMeta.name, {
@@ -14,18 +15,39 @@ registerBlockType (blockMeta.name, {
         }
     },
     edit: (props) => {
-        const blockProps = useBlocksProps();
+        const blockProps = useBlockProps({
+            style: {
+                "--cer-grid-columns": props.attributes.columns
+            }
+        });
         return <>
         <InspectorControls key="settings">
-            
+            <PanelBody title="Grid Settings">
+                <RangeControl
+                    label="Numero di colonne"
+                    value={props.attributes.columns}
+                    onChange={
+                        (newColumns) => {props.setAttributes({columns: newColumns})}
+                    }
+                    min={1}
+                    max={12}
+                    rangeStep={1}
+                    marks={true}
+                    withInputField={false}
+                />
+            </PanelBody>
         </InspectorControls>
             <div {...blockProps}>
                 <InnerBlocks />
-            </div>;
+            </div>
         </>
     },
     save: (props) => {
-        const blockProps = useBlocksProps.save();
+        const blockProps = useBlockProps.save({
+            style: {
+                "--cer-grid-columns": props.attributes.columns
+            }
+        });
         return <div {...blockProps}>
             <InnerBlocks.Content/>
         </div>;
