@@ -2,6 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import {InnerBlocks, InspectorControls, useBlockProps} from '@wordpress/block-editor';
 import {PanelBody, RangeControl} from '@wordpress/components';
 import blockMeta from '../block.json';
+import ColorSelector from './ColorSelector';
 
 registerBlockType (blockMeta.name, {
     title: blockMeta.title,
@@ -35,6 +36,12 @@ registerBlockType (blockMeta.name, {
                     marks={true}
                     withInputField={false}
                 />
+                <ColorSelector 
+                    value="#ff0000"
+                    label="Testo"
+                    onChange={
+                        (newcolor)
+                    }></ColorSelector>
             </PanelBody>
         </InspectorControls>
             <div {...blockProps}>
