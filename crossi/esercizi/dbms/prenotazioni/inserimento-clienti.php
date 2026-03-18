@@ -30,9 +30,9 @@
             $regioniResult = $mysqli->query($regioniQuery);
 
         ?>
-        <form method="GET">
-            <input type="text" placeholder="Nome" required>
-            <input type="text" placeholder="Cognome" required> <br>
+        <form method="POST">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="cognome" placeholder="Cognome" required>
 
             <label for="regione">Seleziona regione:</label>
 
@@ -40,17 +40,33 @@
                 <option value="">-- Tutte le regioni --</option>
 
                 <?php
-                while ($reg = $regioniResult->fetch_assoc()) {
-                    $selected = ($regioneSelezionata == $reg['id_regione']) ? "selected" : "";
-                    echo "<option value='{$reg['id_regione']}' $selected>{$reg['regione']}</option>";
-                }
+                    while ($reg = $regioniResult->fetch_assoc()) {
+                        $selected = ($regioneSelezionata == $reg['id_regione']) ? "selected" : "";
+                        echo "<option value='{$reg['id_regione']}' $selected>{$reg['regione']}</option>";
+                    }
                 ?>
             </select>
             <br><br>
             <input type="submit" value="Salva">
             <input type="reset" value="Annulla">
         </form>
+        <?php
+            if (isset($_POST['nome']) && isset($_POST['cognome']) && isset($_POST['regione'])) {
 
+                $nome = $mysqli->real_escape_string($_POST['nome']);
+                $cognome = $mysqli->real_escape_string($_POST['cognome']);
+                $regione = (int) $_POST['regione'];
+
+                $query = "INSERT INTO clienti (nome, cognome, id_regione)
+                        VALUES ('$nome', '$cognome', $regione)";
+
+                if ($mysqli->query($query)) {
+                    echo "<p>Cliente inserito con successo!</p>";
+                } else {
+                    echo "<p>Errore: " . $mysqli->error . "</p>";
+                }
+            }
+        ?>
         <?php
             $query = 'ALTER TABLE clienti
                       INSERT INTO clienti';
